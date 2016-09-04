@@ -11,9 +11,60 @@
 </head>
 <body>
 	<div class="wrap">
-		
+		<div class="carousel-arrow-left"><span>Влево</span></div>
+		<div class="carousel-hider">
+				<ul class="carousel-list">
+					<li class="carousel-element"><img src="img/1.jpg"><p>Описание 1</p></li>
+					<li class="carousel-element"><img src="img/2.jpg"><p>Описание 2</p></li>
+					<li class="carousel-element"><img src="img/3.jpg"><p>Описание 3</p></li>
+					<li class="carousel-element"><img src="img/4.jpg"><p>Описание 4</p></li>
+					<li class="carousel-element"><img src="img/1.jpg"><p>Описание 5</p></li>
+					<li class="carousel-element"><img src="img/2.jpg"><p>Описание 6</p></li>
+					<li class="carousel-element"><img src="img/3.jpg"><p>Описание 7</p></li>
+					<li class="carousel-element"><img src="img/4.jpg"><p>Описание 8</p></li>
+					<li class="carousel-element"><img src="img/1.jpg"><p>Описание 9</p></li>
+					<li class="carousel-element"><img src="img/2.jpg"><p>Описание 10</p></li>
+					<li class="carousel-element"><img src="img/3.jpg"><p>Описание 11</p></li>
+					<li class="carousel-element"><img src="img/4.jpg"><p>Описание 12</p></li>
+				</ul>
+		</div>
+		<div class="carousel-arrow-right"><span>Вправо</span></div>
 	</div>
+	<!-- begin my-page -->
+	<div class="js-my-page"></div>
+	<!-- end my-page -->
+	<script type="text/tmpl" id='temple'>
+		<div>
+			<h1><%=title%></h1>
+			<img src="<%=img%>" alt="">
+		</div>
+		<div>
+			<p><%=will%></p>
+			<ul>
+				<% for ( var i = 0; i < why.length; i++ ) { %>
+					<li><%=why[i].key%></li>
+				<% } %>	
+			</ul>
+		</div>
+		<div>
+			<address>
+				<span><%=titleTelefon%><br> <%=telefon%></span>
+			</address>
+			<address>
+				<span><%=myPage%> <br> <a href="<%=linkMypage%>" target="_blank"><%=linkMypageName%></a></span>
+			</address>
+		</div>
+	</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="index.js"></script>
+<script src="carusel.js"></script>
+<script src="tmpl.js"></script>
+<script src="template.js"></script>
+<!-- <script type="text/html" id="item_tmpl">
+  <% for ( var i = 0; i < members.length; i++ ) { %>
+    <li id="<%=members[i].id%>" class="<%=(i % 2 == 1 ? " even" : " odd")%>">
+      <%=i+1%>人目 <%=members[i].text%> (from <%=members[i].name%>[ID:<%=members[i].id%>])
+    </li>
+  <% } %>
+</script> -->
 </body>
 </html>	
